@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/mui.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div id="body">
+			<div id="total-amount" class="mui-card">
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						合计：{{totalAmount}}
+					</div>
+				</div>
+			</div>
+			<div id="card-list">
+				<transition-group name="card-list" tag="ul" class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell mui-media card-list-item" v-for="card in bankCards" :key="card.lastMsgId">
+						<a class="mui-navigate-right">
+							<img class="mui-media-object mui-pull-left" :src="'img/'+card.bankIcon">
+							<div class="mui-media-body">
+								<span>{{card.balance}}</span>
+								<p class='mui-ellipsis'><span>{{card.bankName}}</span><span>{{card.tailNum}}</span><span>{{card.lastMsgTime}}</span></p>
+							</div>
+						</a>
+					</li>
+				</transition-group>
+			</div>
+		</div>
+		<script src="js/mui.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/utils.js"></script>
+		<script src="js/bankinfo.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>

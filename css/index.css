@@ -1,0 +1,37 @@
+#total-amount {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.mui-card-content {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#card-list {
+	padding-top: 71px;
+	padding-bottom: 10px;
+}
+
+.card-list-item {
+	transition: all 1000ms;
+}
+.card-list-enter, .card-list-leave-to {
+	opacity: 0;
+	transform: translateY(100%);
+}
+.card-list-leave-active {
+	position: absolute;
+}
+
+.mui-table-view-cell p> :first-child {
+	margin-right: 10px;
+}
+
+.mui-table-view-cell p> :last-child {
+	float: right;
+}
